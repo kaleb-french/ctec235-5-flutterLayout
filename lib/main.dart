@@ -76,8 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      body: Center(
-        child: BradyTile(imagePath: "assets/images/alice.jpg")
+      body: Row(
+          children: [Expanded(child: BradyTile(imagePath: "assets/images/alice.jpg")),
+                     Expanded(child:BradyTile(imagePath: "assets/images/greg.jpg")),
+                     Expanded(child: BradyTile(imagePath: "assets/images/jan.jpg")),
+          ]
       )
     );
   }
@@ -91,7 +94,7 @@ class BradyTile extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.all(12.0),
+        padding: EdgeInsets.all(4.0),
         color: Colors.black,
         child: Image.asset(
           imagePath,
