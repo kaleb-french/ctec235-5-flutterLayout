@@ -76,26 +76,19 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      body: Column(
-                children: [   Expanded(child: Row(
-                                    children: [Expanded(child: BradyTile(imagePath: "assets/images/alice.jpg")),
-                                               Expanded(child:BradyTile(imagePath: "assets/images/greg.jpg")),
-                                               Expanded(child: BradyTile(imagePath: "assets/images/jan.jpg")),]
-                                )
-                              ),
-                              Expanded(child: Row(
-                                    children: [Expanded(child: BradyTile(imagePath: "assets/images/cindy.jpg")),
-                                               Expanded(child:BradyTile(imagePath: "assets/images/carol.jpg")),
-                                               Expanded(child: BradyTile(imagePath: "assets/images/marcia.jpg")),]
-                                )
-                              ),
-                              Expanded(child: Row(
-                                    children: [Expanded(child: BradyTile(imagePath: "assets/images/bobby.jpg")),
-                                               Expanded(child:BradyTile(imagePath: "assets/images/mike.jpg")),
-                                               Expanded(child: BradyTile(imagePath: "assets/images/peter.jpg")),]
-                                )
-                              ),
-                            ]
+      body: GridView.count(crossAxisCount: 3,
+                            crossAxisSpacing: 0,
+                            mainAxisSpacing: 0,
+                            children: [Expanded(child: BradyTile(imagePath: "assets/images/alice.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/greg.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/jan.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/cindy.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/carol.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/marcia.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/bobby.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/mike.jpg")),
+                                               Expanded(child: BradyTile(imagePath: "assets/images/peter.jpg")),],
+
       )
     );
   }
